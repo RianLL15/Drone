@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drone Educacional - SESI/SENAI</title>
+  <link rel="icon" href="Logo-branca.png" type="image/png" />
+
+  <style>
+    :root {
+      --cor-principal: #00ffff;
+      --fundo-transparente: rgba(0, 0, 0, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('Back.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding-bottom: 40px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .banner {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      background: var(--fundo-transparente);
+      border-radius: 10px;
+    }
+
+    h1, h2, h3 {
+      color: var(--cor-principal);
+      margin-bottom: 16px;
+    }
+
+    p, li {
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "✅ ";
+    }
+
+    .btn-download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto 0;
+      padding: 15px 30px;
+      background-color: var(--cor-principal);
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      width: fit-content;
+    }
+
+    .btn-download:hover {
+      background-color: #00cccc;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      .logo {
+        content: url('Logo-preta.png'); /* Adapte para a versão escura da logo */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .btn-download {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
+
+      .banner {
+        max-height: 300px;
+        object-fit: cover;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="DRONE.png" alt="Banner do Projeto" class="banner" />
+  </header>
+
+  <div class="container">
+    <h1>🛸 Drone Educacional – Projeto SESI/SENAI (3º Ano)</h1>
+    <p>Este aplicativo faz parte de um projeto desenvolvido no Programa Projetos Livres do SESI/SENAI Tijucas...</p>
+
+    <h2>📚 Por que o projeto surgiu?</h2>
+    <p>A ideia deste projeto nasceu diante de um problema muito sério e atual: a falta de segurança em ambientes escolares. Casos como o trágico ataque à creche de Blumenau (SC), em abril de 2023, revelaram o quão despreparadas muitas instituições estão para lidar com situações de emergência e violência.</p>
+    <p>Inspirados por essa realidade, nossa equipe decidiu dar continuidade a um projeto anterior (turma de 2024), que buscava desenvolver um sistema de segurança automatizado para escolas — tendo o drone como peça-chave para monitoramento e resposta rápida.</p>
+    <p>Embora a estrutura física do drone já estivesse pronta, ele não era funcional: não voava e não se comunicava com nenhum sistema. Nosso desafio em 2025 foi tornar esse drone de fato operacional, criando um aplicativo que permitisse enviar comandos reais e iniciar a jornada rumo à automação escolar.</p>
+
+    <h2>🧠 Sobre o Projeto</h2>
+    <p>O projeto integra diferentes áreas do conhecimento: eletrônica, programação, modelagem 3D e desenvolvimento de aplicativos móveis. Desenvolvemos um aplicativo Android capaz de se comunicar com o drone via Bluetooth, utilizando o módulo HC-06. O microcontrolador Arduino Uno interpreta os comandos enviados e executa ações como:</p>
+    <ul>
+      <li>Ligar/desligar motores</li>
+      <li>Simular movimentos de voo</li>
+      <li>Mover partes da estrutura</li>
+      <li>Testar funções programadas no sistema</li>
+    </ul>
+    <p>Isso possibilitou que o drone, pela primeira vez, voasse com estabilidade controlada, algo que não havia sido alcançado nas tentativas anteriores.</p>
+
+    <h2>📲 O que o aplicativo faz</h2>
+    <ul>
+      <li>Inicialização dos motores</li>
+      <li>Simulação de decolagem</li>
+      <li>Testes de resposta dos eixos</li>
+      <li>Parada de emergência</li>
+      <li>Teste de conectividade entre app e sistema físico</li>
+    </ul>
+
+    <h2>🔧 Tecnologias utilizadas</h2>
+    <ul>
+      <li>🧠 Arduino Uno — Microcontrolador principal do sistema.</li>
+      <li>⚙️ 4 Motores Brushless 920KV — Dois giram no sentido horário e dois no anti-horário.</li>
+      <li>🔋 Bateria LiPo 11.1V — Alimenta todo o circuito com potência adequada.</li>
+      <li>📡 Módulo Bluetooth HC-06 — Responsável pela comunicação sem fio com o app.</li>
+      <li>🛠️ Estrutura em PLA (impressão 3D) — Leve, resistente e personalizada para o projeto.</li>
+      <li>📱 App Inventor — Plataforma utilizada para criar o aplicativo Android.</li>
+    </ul>
+
+    <h2>🧪 Finalidade e impacto</h2>
+    <p>Este projeto vai além da entrega técnica: ele representa a aplicação direta de conhecimentos adquiridos ao longo da formação no ensino médio técnico. Envolve:</p>
+    <ul>
+      <li>📌 Lógica de programação e controle</li>
+      <li>📌 Eletrônica básica e circuitos</li>
+      <li>📌 Comunicação serial e integração de sistemas</li>
+      <li>📌 Design funcional de interface e hardware</li>
+      <li>📌 Trabalho em equipe, pesquisa e prototipagem</li>
+    </ul>
+    <p>Mais do que uma simples solução técnica, o projeto representa um modelo de segurança escolar acessível, voltado especialmente para escolas públicas. A ideia é evoluir para versões futuras com sensores, visão computacional, reconhecimento de rostos e rotas autônomas de patrulhamento com o drone.</p>
+
+    <h2>👥 Criadores</h2>
+    <p><strong>👨‍💻 Rian Luiz Leicinio (RianLL)</strong><br>
+    Responsável pelo desenvolvimento do aplicativo Android, integração com o Arduino, testes de comunicação via Bluetooth e ajustes funcionais do sistema. Foi o responsável por toda a documentação do projeto, incluindo a escrita técnica, organização das informações e elaboração da apresentação para o TCC. Atuou ainda na programação da interface e validação prática do sistema em campo.</p>
+
+    <p><strong>👨‍🔧 Vitor Felles de Lima (Chapecó)</strong><br>
+    Responsável pela construção da estrutura física e parte da montagem eletrônica do drone, cuidando da organização dos componentes, testes de motores e alimentação. Trabalhou na integração do hardware com o software, garantindo o funcionamento do sistema de propulsão e controle.</p>
+
+    <p><strong>👨‍🔧 Luiz Otávio Fonseca do Prado (Capitão Jack Sparrow)</strong><br>
+    Apoio técnico essencial na parte elétrica, colaborando com a montagem dos circuitos, ligação dos motores e testes do sistema de alimentação. Trabalhou em parceria com Vitor para garantir a estabilidade e segurança da parte eletrônica do drone.</p>
+
+    <h2>🎓 Considerações finais</h2>
+    <p>Este projeto não apenas resolve um desafio técnico, mas mostra como a educação pode ser transformadora quando alunos têm liberdade, ferramentas e orientação para criar. O drone funcional é o primeiro passo: no futuro, queremos que ele patrulhe, identifique riscos e se torne parte de um ecossistema inteligente de segurança escolar.</p>
+
+    <div class="download-container">
+      <a href="Drone_v5.apk" class="btn-download">💾 Baixar Aplicativo</a>
+    </div>
+  </div>
+
+</body>
+</html>
